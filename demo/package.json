@@ -1,0 +1,30 @@
+{
+  "name": "extreme-carpaccio-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www",
+    "test": "jasmine-node .",
+    "lint": "eslint javascripts/",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "chalk": "^4.1.2",
+    "debug": "^4.3.4",
+    "express": "^5.1.0",
+    "lodash": "^4.17.21",
+    "url-assembler": "^2.1.1"
+  },
+  "devDependencies": {
+    "bower": "^1.8.14",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.34.1",
+    "jasmine-node": "^3.0.0",
+    "supertest": "^7.0.0"
+  }
+}

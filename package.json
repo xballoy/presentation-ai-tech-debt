@@ -1,0 +1,21 @@
+{
+  "name": "ai-tech-debt-presentation",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "format:check": "prettier . --check",
+    "format:fix": "prettier . --write"
+  },
+  "dependencies": {
+    "@slidev/cli": "52.9.1",
+    "@slidev/theme-default": "0.25.0",
+    "vue": "3.5.25"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "prettier-plugin-slidev": "1.0.5"
+  }
+}
