@@ -3,6 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "build": "pnpm run build:en && pnpm run build:fr",
     "build:en": "slidev build slides-en.md --base /en/ --out dist/en",
     "build:fr": "slidev build slides-fr.md --base /fr/ --out dist/fr",
     "dev:fr": "slidev --open slides-fr.md",
