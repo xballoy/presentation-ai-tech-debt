@@ -31,7 +31,10 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm build
+        run: |
+          pnpm slidev build slides-en.md --base /${{ github.event.repository.name }}/en/ --out dist/en
+          pnpm slidev build slides-fr.md --base /${{ github.event.repository.name }}/fr/ --out dist/fr
+          cp public/index.html dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
