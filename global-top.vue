@@ -1,6 +1,6 @@
 <template>
   <a
-    v-if="isProduction"
+    v-if="showSwitcher"
     :href="otherLangUrl"
     class="absolute top-4 right-4 z-50 px-2 py-1 text-sm rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
   >
@@ -9,17 +9,24 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useSlideContext } from '@slidev/client'
+import { computed, ref, onMounted } from 'vue'
 
-const { $slidev } = useSlideContext()
+const pathname = ref('')
+const showSwitcher = ref(false)
 
-const base = computed(() => $slidev.configs.base || '/')
-const isProduction = computed(() => base.value !== '/')
-const isFr = computed(() => base.value.includes('/fr'))
+onMounted(() => {
+  pathname.value = window.location.pathname
+  showSwitcher.value = pathname.value.includes('/fr/') || pathname.value.includes('/en/')
+})
 
-const baseRoot = computed(() => base.value.replace(/\/(en|fr)\/$/, '/'))
+const isFr = computed(() => pathname.value.includes('/fr/'))
 
-const otherLangUrl = computed(() => `${baseRoot.value}${isFr.value ? 'en' : 'fr'}/`)
+const otherLangUrl = computed(() => {
+  if (isFr.value) {
+    return pathname.value.replace('/fr/', '/en/')
+  }
+  return pathname.value.replace('/en/', '/fr/')
+})
+
 const otherLangLabel = computed(() => (isFr.value ? 'EN' : 'FR'))
 </script>
