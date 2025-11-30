@@ -10,7 +10,7 @@ Deux approches pour utiliser l'IA dans le développement
 
 ## ❌ Vibe Coding
 
-|    |                                |
+|                   |                                       |
 | ----------------- | ------------------------------------- |
 | **Prompts**       | "Crée une page de profil utilisateur" |
 | **Validation**    | Pas de review                         |
@@ -24,7 +24,7 @@ Deux approches pour utiliser l'IA dans le développement
 
 ## ✅ Ingénierie assistée par IA
 
-|    |                                  |
+|                   |                                         |
 | ----------------- | --------------------------------------- |
 | **Prompts**       | "Refactor UserService pour utiliser DI" |
 | **Validation**    | Review + tests à chaque étape           |
