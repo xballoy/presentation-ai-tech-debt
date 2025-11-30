@@ -9,6 +9,7 @@ Utilisation de l'AI pour mettre à jour et/ou remplacer des dépendances sur des
 - Migration majeure de Material UI
 
 <!-->
+
 - Donner à l'IA la documentation de migration (ou lui demander de la chercher)
 - Ca ne fonctionne pas (encore) super bien pour les librairies UI (pas de feedback d'erreur)
-<-->
+  <-->

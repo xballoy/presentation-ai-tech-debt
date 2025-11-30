@@ -3,11 +3,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export",
-    "format:check": "prettier . --check",
-    "format:fix": "prettier . --write"
+    "build:en": "slidev build slides-en.md --base /en/ --out dist/en",
+    "build:fr": "slidev build slides-fr.md --base /fr/ --out dist/fr",
+    "dev:fr": "slidev --open slides-fr.md",
+    "dev:en": "slidev --open slides-en.md",
+    "format:check": "prettier slides-fr.md slides-en.md pages --check",
+    "format:fix": "prettier slides-fr.md slides-en.md pages pages --write"
   },
   "dependencies": {
     "@slidev/cli": "52.9.1",
