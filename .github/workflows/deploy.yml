@@ -32,8 +32,8 @@ jobs:
 
       - name: Build
         run: |
-          pnpm slidev build slides-en.md --base /${{ github.event.repository.name }}/en/ --out dist/en
-          pnpm slidev build slides-fr.md --base /${{ github.event.repository.name }}/fr/ --out dist/fr
+          pnpm slidev build slides-en.md --without-notes --base /${{ github.event.repository.name }}/en/ --out dist/en
+          pnpm slidev build slides-fr.md --without-notes --base /${{ github.event.repository.name }}/fr/ --out dist/fr
           cp public/index.html dist/
 
       - name: Setup Pages
