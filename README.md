@@ -6,6 +6,10 @@ View the presentation online:
 - [English version](https://xballoy.github.io/presentation-ai-tech-debt/en/)
 - [French version](https://xballoy.github.io/presentation-ai-tech-debt/fr/)
 
+Or download the PDF version:
+- [English version](./slides-en.pdf)
+- [French version](./slides-fr.pdf)
+
 ## Development
 
 To start the presentation:

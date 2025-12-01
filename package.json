@@ -5,8 +5,8 @@
   "scripts": {
     "dev:fr": "slidev --open slides-fr.md",
     "dev:en": "slidev --open slides-en.md",
-    "format:check": "prettier slides-fr.md slides-en.md pages --check",
-    "format:fix": "prettier slides-fr.md slides-en.md pages pages --write"
+    "format:check": "prettier pages --check",
+    "format:fix": "prettier pages --write"
   },
   "dependencies": {
     "@slidev/cli": "52.9.1",
