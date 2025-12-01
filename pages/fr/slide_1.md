@@ -8,6 +8,7 @@ drawings:
   persist: false
 mdc: true
 duration: 45min
+routerMode: hash
 ---
 
 # L'IA pour gérer la dette technique
