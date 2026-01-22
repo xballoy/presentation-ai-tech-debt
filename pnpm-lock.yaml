@@ -19,11 +19,11 @@ importers:
         version: 3.5.26(typescript@5.9.3)
     devDependencies:
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.0
+        version: 3.8.0
       prettier-plugin-slidev:
         specifier: 1.0.5
-        version: 1.0.5(prettier@3.7.4)
+        version: 1.0.5(prettier@3.8.0)
 
 packages:
 
@@ -2090,8 +2090,8 @@ packages:
     peerDependencies:
       prettier: ^3.2.4
 
-  prettier@3.7.4:
-    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+  prettier@3.8.0:
+    resolution: {integrity: sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5206,12 +5206,12 @@ snapshots:
       image-size: 1.2.1
       jszip: 3.10.1
 
-  prettier-plugin-slidev@1.0.5(prettier@3.7.4):
+  prettier-plugin-slidev@1.0.5(prettier@3.8.0):
     dependencies:
       '@slidev/parser': 0.47.5
-      prettier: 3.7.4
+      prettier: 3.8.0
 
-  prettier@3.7.4: {}
+  prettier@3.8.0: {}
 
   prism-theme-vars@0.2.5: {}
 
