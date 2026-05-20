@@ -30,29 +30,8 @@ Structure the output so each item can be addressed independently.
 ```
 
 <!--
-⚠️ On exécute le prompt et on explique pendant que ça tourne
-
-**Timing**: 1-2 minutes
-
-**Points clés sur le prompt**:
-1. **Précision vs vague**
-   - ❌ "Analyse la dette technique" (trop vague, résultats aléatoires)
-   - ✅ Ce prompt: structuré, spécifique, format de sortie défini
-   - "Regardez la structure - on spécifie EXACTEMENT ce qu'on cherche"
-
-2. **Contenu du prompt**
-   - Focus areas précis (smells, dépendances, architecture, sécurité...)
-   - Format de sortie structuré (localisation, sévérité, effort, remédiation)
-   - Action plan demandé (quick wins, critiques, long-terme)
-
-3. **Comment créer un bon prompt**
-   - Si vous ne savez pas quoi écrire, demandez à l'IA de vous donner un prompt
-   - Soyez **précis** dans vos demandes
-   - Guidances file: minimum nécessaire pour limiter la context window
-
-- Ce prompt: ~150 tokens → réponse: ~2000-5000 tokens
-- Trade-off constant: précision vs context window
-- Guidances: enrichir itérativement plutôt que tout écrire d'un coup
-
-**Transition**: "Maintenant regardons l'IA travailler en temps réel..."
+- Claude: mode Sandbox (Docker sbx)
+- Utilisation du mode Plan
+    - lecture seule (enforced par le prompt seulement)
+    - idéal pour l'exploration et les reviews
 -->

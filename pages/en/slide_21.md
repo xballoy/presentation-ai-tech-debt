@@ -1,40 +1,44 @@
-# Key takeaways
+# Formalize what the agent must know
 
-## Five demos, one approach
+Without context, the agent replicates what it sees in the code, including bad practices.
 
-1. **Code analysis**: AI analyzes, we evaluate
-2. **Critical thinking**: AI estimated effort, we contextualize
-3. **Migration decisions**: AI compared options, we chose
-4. **Automation**: AI wrote code, we validated
+<div class="grid grid-cols-2 gap-6">
 
-<br />
+<div>
 
-## Where to start on your projects
+### `AGENTS.md`
 
-- **Start small**: code analysis (low risk)
-- **Develop critical thinking**: question everything
-- **Expand progressively**: migration → refactoring → automation
-- **Keep control**: AI proposes, you decide
+Always loaded into the context.
 
-<!--
-**Timing**: 2 minutes
+```md
+# Conventions
 
-**Objective**: Synthesize learning and reinforce the main message.
+- Tests: vitest, not jasmine
+- Logger: pino, never console.*
+- No moment.js
+```
 
-**Talking points**:
-- "You've seen 4 different demos, but the same pattern each time"
-- "AI suggests, YOU validate - that's the difference with vibe coding"
-- "Don't start by migrating React 19 - start by analyzing your code"
-- "Build your confidence progressively"
+</div>
 
-**For advanced users**:
-- "Codemods are powerful but require rigorous validation"
-- "Think of AI as a very fast pair programmer that needs supervision"
+<div>
 
-**Transition to slide 19 (Resources)**:
-"If you want to go deeper on these concepts..."
+### Skills
 
-**Energy**: Authoritative - strong close with clear message
+The agent reads descriptions in context and loads the full content when the task matches.
 
-**Final checkpoint**: Reiterate one last time "AI suggests, human validates"
--->
+- **Auto**: `writing-tests`, `debugging`, `pr-content`…
+- **Explicit**: `/code-review`, `/codemod`, `/release`
+
+</div>
+
+</div>
+
+<br/>
+
+### Tool: [rulesync](https://rulesync.dyoshikawa.com/)
+
+Single source → configs for **25+ tools**: Claude Code, Cursor, Copilot, Gemini CLI, Codex, Cline… Rules, skills, commands, MCP, permissions.
+
+```bash
+npx rulesync generate
+```

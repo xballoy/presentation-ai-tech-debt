@@ -1,40 +1,44 @@
-# Points clés
+# Formaliser ce que l'agent doit savoir
 
-## Cinq démos, une approche
+Sans contexte, l'agent réplique ce qu'il voit dans le code, y compris les mauvaises pratiques.
 
-1. **Analyse de code** : l'IA analyse, nous évaluons
-2. **Pensée critique** : l'IA a estimé l'effort, nous contextualisons
-3. **Décisions de migration** : l'IA a comparé les options, nous avons choisi
-4. **Automatisation** : l'IA a écrit le code, nous avons validé
+<div class="grid grid-cols-2 gap-6">
 
-<br />
+<div>
 
-## Par où commencer sur vos projets
+### `AGENTS.md`
 
-- **Commencez petit** : analyse de code (faible risque)
-- **Développez votre esprit critique** : questionnez tout
-- **Élargissez progressivement** : migration → refactoring → automatisation
-- **Gardez le contrôle** : l'IA propose, vous décidez
+Toujours chargé dans le contexte.
 
-<!--
-**Timing**: 2 minutes
+```md
+# Conventions
 
-**Objectif**: Synthétiser l'apprentissage et renforcer le message principal.
+- Tests: vitest, pas jasmine
+- Logger: pino, jamais console.*
+- Pas de moment.js
+```
 
-**Talking points**:
-- "Vous avez vu 4 démos différentes, mais le même pattern à chaque fois"
-- "L'IA suggère, VOUS validez - c'est ça la différence avec le vibe coding"
-- "Ne commencez pas par migrer React 19 - commencez par analyser votre code"
-- "Construisez votre confiance progressivement"
+</div>
 
-**Pour avancés**:
-- "Les codemods sont puissants mais nécessitent validation rigoureuse"
-- "Pensez à l'IA comme à un pair programmer très rapide mais qui a besoin de supervision"
+<div>
 
-**Transition vers slide 19 (Resources)**:
-"Si vous voulez approfondir ces concepts..."
+### Skills
 
-**Énergie**: Autoritaire - clôture forte avec message clair
+L'agent lit les descriptions en contexte et charge le contenu complet quand la tâche correspond.
 
-**Checkpoint final**: Réitérer une dernière fois "AI suggests, human validates"
--->
+- **Auto** : `writing-tests`, `debugging`, `pr-content`…
+- **Explicite** : `/code-review`, `/codemod`, `/release`
+
+</div>
+
+</div>
+
+<br/>
+
+### Outil : [rulesync](https://rulesync.dyoshikawa.com/)
+
+Source unique → configs pour **25+ outils** : Claude Code, Cursor, Copilot, Gemini CLI, Codex, Cline… Rules, skills, commands, MCP, permissions.
+
+```bash
+npx rulesync generate
+```

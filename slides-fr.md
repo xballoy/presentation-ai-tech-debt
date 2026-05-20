@@ -96,3 +96,7 @@ src: ./pages/fr/slide_21.md
 ---
 src: ./pages/fr/slide_22.md
 ---
+
+---
+src: ./pages/fr/slide_23.md
+---

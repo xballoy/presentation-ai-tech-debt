@@ -1,0 +1,15 @@
+{
+  "name": "jasmine-node-to-jest-spy",
+  "version": "0.1.0",
+  "description": "Migrate jasmine-node spy semantics (.andReturn/.andCallFake/jasmine.any) to jest equivalents",
+  "packageManager": "npm@10.x",
+  "type": "module",
+  "scripts": {
+    "test": "npx codemod@latest jssg test -l javascript ./scripts/codemod.ts",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@codemod.com/jssg-types": "latest",
+    "typescript": "latest"
+  }
+}

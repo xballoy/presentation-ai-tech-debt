@@ -1,36 +1,19 @@
-# Comparer les alternatives avant de migrer
+# Supprimer plutôt que migrer
 
-L'agent analyse les options et recommande la meilleure approche pour votre contexte.
+La meilleure dépendance, c'est celle qu'on n'a pas. L'agent identifie ce qui peut revenir à des APIs natives.
 
 ## Exemple de prompt
 
 ```text
-Search body-parser alternatives.
+Analyze our use of lodash in the codebase.
 
-Compare:
-- Performance and bundle size
-- API compatibility
-- Migration effort
-- Active maintenance
+Identify functions that can be replaced with native JavaScript APIs.
 
-Recommend the best option for our use case.
+For each replacement:
+- Show the native equivalent
+- Confirm identical behavior
+- Highlight any edge cases
+- Estimate migration effort
+
+Prioritize high-usage functions first.
 ```
-
-<!--
-**Timing**: 2-3 minutes
-
-**Objectif**: Montrer comment utiliser l'IA pour les décisions de migration.
-
-**MESSAGE CLÉ**: Ne migrez pas à l'aveugle - analysez d'abord les alternatives.
-
-**Talking points**:
-- "body-parser est déprécié - mais vers quoi migrer?"
-- "L'agent peut comparer plusieurs alternatives objectivement"
-- "Vous obtenez une analyse détaillée: perf, compatibilité, effort"
-- "Puis VOUS décidez en fonction de votre contexte"
-
-**Transition vers slide 17**:
-"Parfois, la meilleure migration est de supprimer la dépendance..."
-
-**Énergie**: Pragmatique - focus sur les décisions éclairées
--->

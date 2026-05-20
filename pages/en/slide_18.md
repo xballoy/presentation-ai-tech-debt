@@ -1,43 +1,22 @@
-# Replacement with native APIs
+# Automate with a custom codemod
 
-The agent identifies when a dependency can be replaced with native platform APIs.
+The AI looks for an existing codemod, and if none fits, writes one with dry-run and human validation.
 
 ## Example prompt
 
 ```text
-Analyze our use of lodash in the codebase.
+/codemod
 
-Identify functions that can be replaced with native JavaScript APIs.
-
-For each replacement:
-- Show the native equivalent
-- Confirm identical behavior
-- Highlight any edge cases
-- Estimate migration effort
-
-Prioritize high-usage functions first.
+Migrate our jasmine-node test suite to jest spy semantics:
+- spyOn(x, y).andReturn(z)     → jest.spyOn(x, y).mockReturnValue(z)
+- spyOn(x, y).andCallFake(fn)  → jest.spyOn(x, y).mockImplementation(fn)
+- jasmine.any(Type)            → expect.any(Type)
 ```
 
-<!--
-**Timing**: 2-3 minutes
+**40+ occurrences across 4 spec files.** No public codemod exists for this transformation.
 
-**Objective**: Show how to reduce technical debt by eliminating unnecessary dependencies.
+### Tool: [Codemod MCP](https://docs.codemod.com/model-context-protocol)
 
-**KEY MESSAGE**: The best dependency is one you don't have.
-
-**Talking points**:
-- "Many libraries are obsolete since ES6/ES2020"
-- "lodash was essential in 2015, less necessary today"
-- "The agent can identify what's replaceable"
-- "You decide if the effort is worth it"
-
-**Examples to develop**:
-- moment.js → Intl: "moment is 67KB, Intl is native and supports i18n"
-- lodash → natives: "90% of lodash usage is replaceable"
-- axios → fetch: "fetch is standard, supports native streaming"
-
-**Transition to slide 18**:
-"Now that we've seen how to reduce debt, let's look at the limits..."
-
-**Energy**: Optimistic - show concrete gains
--->
+```bash
+npx codemod ai
+```
