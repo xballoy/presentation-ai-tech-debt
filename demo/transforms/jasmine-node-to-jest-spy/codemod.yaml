@@ -1,0 +1,25 @@
+schema_version: "1.0"
+
+name: "jasmine-node-to-jest-spy"
+version: "0.1.0"
+description: "Migrate jasmine-node spy semantics (.andReturn/.andCallFake/jasmine.any) to jest equivalents"
+author: "Xavier Balloy"
+license: "MIT"
+
+
+targets:
+  # Keep this aligned with the files matched in workflow.yaml.
+  languages: ["javascript"]
+
+keywords: ["transformation", "migration"]
+
+registry:
+  access: "public"
+  visibility: "public"
+
+capabilities: []
+
+workflows:
+  - name: main
+    default: true
+    path: workflow.yaml
