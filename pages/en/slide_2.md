@@ -10,6 +10,6 @@
 
 </div>
 <div>
-<img src="/me.jpg" class="rounded-full w-48 h-48 object-cover" />
+<img :src="'/me.jpg'" class="rounded-full w-48 h-48 object-cover" />
 </div>
 </div>
