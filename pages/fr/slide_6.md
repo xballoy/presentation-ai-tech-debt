@@ -1,72 +1,63 @@
----
-layout: two-cols-header
----
-
 # Comment fonctionne un LLM ?
 
-Les deux étapes clés pour créer un LLM :
-
-::left::
-
-<v-clicks>
-<div>
-
-**Pre-training** : les modèles analysent des milliards d'exemples de texte, apprenant à prédire ce qui vient ensuite
-
-<div class="text-sm mt-4 text-gray-600">
-
-💰 Millions de $ / ⏱️ Semaines/mois / 🖥️ Milliers de GPU
-
-</div>
-</div>
-
-</v-clicks>
-
-::right::
+Trois grandes étapes pour créer un LLM :
 
 <v-clicks>
 
 <div>
 
-**Fine-tuning** : les modèles sont affinés pour suivre des instructions, être utiles et éviter le contenu nuisible
+**1. Pré-entraînement**
+
+Le modèle apprend à prédire le prochain token à partir de milliards d'exemples de texte.
 
 <div class="text-sm mt-4 text-gray-600">
 
-📊 Moins de données / 👤 Feedback humain / ✅ Comportement souhaité
+💰 Millions de $ · ⏱️ Semaines/mois · 🖥️ Milliers de GPU
+
+</div>
+</div>
+
+<div>
+
+**2. Fine-tuning supervisé (SFT)**
+
+Le modèle apprend à suivre des instructions à partir d'exemples annotés par des humains.
+
+<div class="text-sm mt-4 text-gray-600">
+
+📊 Moins de données · 👤 Exemples sélectionnés · 🎯 Suivi d'instructions
+
+</div>
+</div>
+
+<div>
+
+**3. Apprentissage par renforcement avec feedback humain (RLHF)**
+
+Le modèle apprend à être utile, honnête et inoffensif via les préférences humaines.
+
+<div class="text-sm mt-4 text-gray-600">
+
+👥 Feedback humain · 🏆 Reward model · ✅ Alignement
 
 </div>
 </div>
 
 </v-clicks>
-
-<style>
-.two-cols-header {
-  column-gap: 16px;
-}
-</style>
 
 <!--
-**Timing**: 2 minutes
-
-**Objectif**: Démystifier les LLMs - ce ne sont pas des oracles magiques.
-
-**Talking points**:
-- "Pour comprendre comment utiliser l'IA, il faut comprendre comment elle est créée"
-- "Pre-training = apprentissage massif sur internet, livres, code"
+**1. Pré-entraînement**:
+- "Apprentissage massif sur internet, livres, code"
+- "Next Token Prediction sur des corpus gigantesques"
 - "Coûte des millions de dollars - c'est pourquoi VOUS ne pouvez pas en créer un"
-- "Fine-tuning = on apprend au modèle à suivre des instructions, être utile"
-- "Moins cher, utilise le feedback humain"
-- "Pre-training utilise Next Token Prediction sur des corpus massifs"
-- "Fine-tuning inclut instruction-tuning et RLHF (Reinforcement Learning from Human Feedback)"
-- "C'est pourquoi certains modèles sont meilleurs pour le code (fine-tuned sur GitHub)"
 
-**Pourquoi c'est important pour la dette technique**:
-- "Pre-training = le modèle a VU beaucoup de code legacy et moderne"
-- "Fine-tuning = il a appris à AIDER les développeurs"
-- "Mais il ne connaît pas VOTRE contexte - c'est pourquoi la validation est critique"
+**2. Fine-tuning supervisé (SFT)**:
+- "On lui apprend à suivre des instructions avec des exemples annotés"
+- "Beaucoup moins de données, beaucoup moins cher"
+- "C'est ici qu'un modèle devient bon pour le code, le dialogue, etc."
 
-**Transition vers slide 6**:
-"Maintenant, que se passe-t-il quand vous lui envoyez un prompt?"
-
-**Énergie**: Pédagogique - enseigner les fondamentaux
+**3. RLHF (Reinforcement Learning from Human Feedback)**:
+- "On lui apprend à préférer les bonnes réponses via du feedback humain"
+- "Modèle de récompense entraîné sur des préférences humaines"
+- "Objectif: utile, honnête, inoffensif (HHH)"
 -->
