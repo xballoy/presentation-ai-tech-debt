@@ -1,29 +1,33 @@
-# Et après ? Payer la dette en continu
+# Formaliser ce que l'agent doit savoir
 
-Jusqu'ici : un dev qui rembourse la dette de manière réactive. La suite : des agents qui paient en continu.
+Sans contexte, l'agent réplique ce qu'il voit dans le code, y compris les mauvaises pratiques.
 
 <div class="grid grid-cols-2 gap-6">
 
 <div>
 
-### Le problème de drift
+### `AGENTS.md`
 
-Les agents reproduisent les patterns existants, y compris les mauvais. Le code dérive lentement.
+Toujours chargé dans le contexte.
 
-> Chez OpenAI, **20 % de la semaine (tous les vendredis) à nettoyer le « AI slop »** avant qu'ils n'automatisent ça.
+```md
+# Conventions
 
-Source : _Harness engineering_, Ryan Lopopolo, OpenAI (fév. 2026).
+- Tests: vitest, pas jasmine
+- Logger: pino, jamais console.*
+- Pas de moment.js
+```
 
 </div>
 
 <div>
 
-### La réponse : le harness
+### Skills
 
-1. Encoder les « golden principles » dans le repo
-2. Des agents en tâche de fond qui scannent les dérives
-3. Des PRs de cleanup petites, ciblées, automerge
-4. **Payer la dette de manière continue** plutôt qu'en gros chantiers périodiques
+L'agent lit les descriptions en contexte et charge le contenu complet quand la tâche correspond.
+
+- **Auto** : `writing-tests`, `debugging`, `pr-content`…
+- **Explicite** : `/code-review`, `/codemod`, `/release`
 
 </div>
 
@@ -31,10 +35,10 @@ Source : _Harness engineering_, Ryan Lopopolo, OpenAI (fév. 2026).
 
 <br/>
 
-### gh-aw — la version open source
+### Outil : [rulesync](https://rulesync.dyoshikawa.com/)
 
-[`github/gh-aw`](https://github.github.com/gh-aw/) : workflows agentiques dans GitHub Actions, déclarés en markdown.
+Source unique → configs pour **25+ outils** : Claude Code, Cursor, Copilot, Gemini CLI, Codex, Cline… Rules, skills, commands, MCP, permissions.
 
 ```bash
-gh extension install github/gh-aw
+npx rulesync generate
 ```

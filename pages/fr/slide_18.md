@@ -1,44 +1,22 @@
-# Formaliser ce que l'agent doit savoir
+# Automatiser avec un codemod sur mesure
 
-Sans contexte, l'agent réplique ce qu'il voit dans le code, y compris les mauvaises pratiques.
+L'IA cherche un codemod existant, et si rien ne convient, elle en écrit un avec dry-run et validation humaine.
 
-<div class="grid grid-cols-2 gap-6">
+## Exemple de prompt
 
-<div>
+```text
+/codemod
 
-### `AGENTS.md`
-
-Toujours chargé dans le contexte.
-
-```md
-# Conventions
-
-- Tests: vitest, pas jasmine
-- Logger: pino, jamais console.*
-- Pas de moment.js
+Migrate our jasmine-node test suite to jest spy semantics:
+- spyOn(x, y).andReturn(z)     → jest.spyOn(x, y).mockReturnValue(z)
+- spyOn(x, y).andCallFake(fn)  → jest.spyOn(x, y).mockImplementation(fn)
+- jasmine.any(Type)            → expect.any(Type)
 ```
 
-</div>
+**40+ occurrences sur 4 fichiers de specs.** Aucun codemod public n'existe pour cette transformation.
 
-<div>
-
-### Skills
-
-L'agent lit les descriptions en contexte et charge le contenu complet quand la tâche correspond.
-
-- **Auto** : `writing-tests`, `debugging`, `pr-content`…
-- **Explicite** : `/code-review`, `/codemod`, `/release`
-
-</div>
-
-</div>
-
-<br/>
-
-### Outil : [rulesync](https://rulesync.dyoshikawa.com/)
-
-Source unique → configs pour **25+ outils** : Claude Code, Cursor, Copilot, Gemini CLI, Codex, Cline… Rules, skills, commands, MCP, permissions.
+### Outil : [Codemod MCP](https://docs.codemod.com/model-context-protocol)
 
 ```bash
-npx rulesync generate
+npx codemod ai
 ```

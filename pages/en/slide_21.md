@@ -1,29 +1,33 @@
-# What's next? Pay the debt continuously
+# Formalize what the agent must know
 
-So far: a developer paying down the debt reactively. What's next: agents paying it down continuously.
+Without context, the agent replicates what it sees in the code, including bad practices.
 
 <div class="grid grid-cols-2 gap-6">
 
 <div>
 
-### The drift problem
+### `AGENTS.md`
 
-Agents reproduce existing patterns, including bad ones. The code slowly drifts.
+Always loaded into the context.
 
-> At OpenAI, **20% of the week (every Friday) cleaning up the "AI slop"** before they automated it.
+```md
+# Conventions
 
-Source: _Harness engineering_, Ryan Lopopolo, OpenAI (Feb. 2026).
+- Tests: vitest, not jasmine
+- Logger: pino, never console.*
+- No moment.js
+```
 
 </div>
 
 <div>
 
-### The answer: the harness
+### Skills
 
-1. Encode the "golden principles" in the repo
-2. Background agents that scan for drift
-3. Small, targeted, automerge cleanup PRs
-4. **Pay down the debt continuously** rather than in big periodic projects
+The agent reads descriptions in context and loads the full content when the task matches.
+
+- **Auto**: `writing-tests`, `debugging`, `pr-content`…
+- **Explicit**: `/code-review`, `/codemod`, `/release`
 
 </div>
 
@@ -31,10 +35,10 @@ Source: _Harness engineering_, Ryan Lopopolo, OpenAI (Feb. 2026).
 
 <br/>
 
-### gh-aw — the open source version
+### Tool: [rulesync](https://rulesync.dyoshikawa.com/)
 
-[`github/gh-aw`](https://github.github.com/gh-aw/): agentic workflows in GitHub Actions, declared in markdown.
+Single source → configs for **25+ tools**: Claude Code, Cursor, Copilot, Gemini CLI, Codex, Cline… Rules, skills, commands, MCP, permissions.
 
 ```bash
-gh extension install github/gh-aw
+npx rulesync generate
 ```
