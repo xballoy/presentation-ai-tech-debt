@@ -1,19 +1,44 @@
-# Supprimer plutôt que migrer
+# Formaliser ce que l'agent doit savoir
 
-La meilleure dépendance, c'est celle qu'on n'a pas. L'agent identifie ce qui peut revenir à des APIs natives.
+Sans contexte, l'agent réplique ce qu'il voit dans le code, y compris les mauvaises pratiques.
 
-## Exemple de prompt
+<div class="grid grid-cols-2 gap-6">
 
-```text
-Analyze our use of lodash in the codebase.
+<div>
 
-Identify functions that can be replaced with native JavaScript APIs.
+### `AGENTS.md`
 
-For each replacement:
-- Show the native equivalent
-- Confirm identical behavior
-- Highlight any edge cases
-- Estimate migration effort
+Toujours chargé dans le contexte.
 
-Prioritize high-usage functions first.
+```md
+# Conventions
+
+- Tests: vitest, pas jasmine
+- Logger: pino, jamais console.*
+- Pas de moment.js
+```
+
+</div>
+
+<div>
+
+### Skills
+
+L'agent lit les descriptions en contexte et charge le contenu complet quand la tâche correspond.
+
+- **Auto** : `writing-tests`, `debugging`, `pr-content`…
+- **Explicite** : `/code-review`, `/codemod`, `/release`
+
+</div>
+
+</div>
+
+<br/>
+
+### Outil : [rulesync](https://rulesync.dyoshikawa.com/)
+
+Source unique → configs pour **25+ outils** : Claude Code, Cursor, Copilot, Gemini CLI, Codex, Cline… Rules, skills, commands, MCP, permissions.
+
+```bash
+npx rulesync generate
 ```

@@ -1,17 +1,19 @@
-# Comparer avant de migrer
+# Supprimer plutôt que migrer
 
-L'agent analyse les options et recommande la meilleure approche pour votre contexte.
+La meilleure dépendance, c'est celle qu'on n'a pas. L'agent identifie ce qui peut revenir à des APIs natives.
 
 ## Exemple de prompt
 
 ```text
-Search body-parser alternatives.
+Analyze our use of lodash in the codebase.
 
-Compare:
-- Performance and bundle size
-- API compatibility
-- Migration effort
-- Active maintenance
+Identify functions that can be replaced with native JavaScript APIs.
 
-Recommend the best option for our use case.
+For each replacement:
+- Show the native equivalent
+- Confirm identical behavior
+- Highlight any edge cases
+- Estimate migration effort
+
+Prioritize high-usage functions first.
 ```

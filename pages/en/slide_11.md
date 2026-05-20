@@ -25,22 +25,3 @@ graph LR
 - Scalable: adaptable from individual code to complex systems
 
 </div>
-
-<!--
-**Timing**: 1 minute
-
-**Objective**: Preview the progression and set expectations for the pattern.
-
-**Talking points**:
-- "We'll go through 4 stages of increasing complexity"
-- "Start with analysis - low risk, high value"
-- "End with automation - more powerful but requires more validation"
-- "At EACH stage, notice the pattern: AI makes suggestions, YOU validate them"
-- "This progression reflects how to integrate AI progressively"
-- "Start with read-only tools, work up to modifications"
-
-**Transition to slide 10**:
-"Let's start with the first step: code analysis..."
-
-**Energy**: Anticipation - build interest for the demos
--->

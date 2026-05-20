@@ -1,43 +1,44 @@
-# Replacement with native APIs
+# Formalize what the agent must know
 
-The agent identifies when a dependency can be replaced with native platform APIs.
+Without context, the agent replicates what it sees in the code, including bad practices.
 
-## Example prompt
+<div class="grid grid-cols-2 gap-6">
 
-```text
-Analyze our use of lodash in the codebase.
+<div>
 
-Identify functions that can be replaced with native JavaScript APIs.
+### `AGENTS.md`
 
-For each replacement:
-- Show the native equivalent
-- Confirm identical behavior
-- Highlight any edge cases
-- Estimate migration effort
+Always loaded into the context.
 
-Prioritize high-usage functions first.
+```md
+# Conventions
+
+- Tests: vitest, not jasmine
+- Logger: pino, never console.*
+- No moment.js
 ```
 
-<!--
-**Timing**: 2-3 minutes
+</div>
 
-**Objective**: Show how to reduce technical debt by eliminating unnecessary dependencies.
+<div>
 
-**KEY MESSAGE**: The best dependency is one you don't have.
+### Skills
 
-**Talking points**:
-- "Many libraries are obsolete since ES6/ES2020"
-- "lodash was essential in 2015, less necessary today"
-- "The agent can identify what's replaceable"
-- "You decide if the effort is worth it"
+The agent reads descriptions in context and loads the full content when the task matches.
 
-**Examples to develop**:
-- moment.js → Intl: "moment is 67KB, Intl is native and supports i18n"
-- lodash → natives: "90% of lodash usage is replaceable"
-- axios → fetch: "fetch is standard, supports native streaming"
+- **Auto**: `writing-tests`, `debugging`, `pr-content`…
+- **Explicit**: `/code-review`, `/codemod`, `/release`
 
-**Transition to slide 18**:
-"Now that we've seen how to reduce debt, let's look at the limits..."
+</div>
 
-**Energy**: Optimistic - show concrete gains
--->
+</div>
+
+<br/>
+
+### Tool: [rulesync](https://rulesync.dyoshikawa.com/)
+
+Single source → configs for **25+ tools**: Claude Code, Cursor, Copilot, Gemini CLI, Codex, Cline… Rules, skills, commands, MCP, permissions.
+
+```bash
+npx rulesync generate
+```

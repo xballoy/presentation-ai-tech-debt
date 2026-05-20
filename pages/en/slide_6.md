@@ -1,72 +1,63 @@
----
-layout: two-cols-header
----
-
 # How does an LLM work?
 
-The two key steps to create an LLM:
-
-::left::
-
-<v-clicks>
-<div>
-
-**Pre-training**: models analyze billions of text examples, learning to predict what comes next
-
-<div class="text-sm mt-4 text-gray-600">
-
-💰 Millions of $ / ⏱️ Weeks/months / 🖥️ Thousands of GPUs
-
-</div>
-</div>
-
-</v-clicks>
-
-::right::
+Three major steps to create an LLM:
 
 <v-clicks>
 
 <div>
 
-**Fine-tuning**: models are refined to follow instructions, be helpful, and avoid harmful content
+**1. Pre-training**
+
+The model learns to predict the next token from billions of text examples.
 
 <div class="text-sm mt-4 text-gray-600">
 
-📊 Less data / 👤 Human feedback / ✅ Desired behavior
+💰 Millions of $ · ⏱️ Weeks/months · 🖥️ Thousands of GPUs
+
+</div>
+</div>
+
+<div>
+
+**2. Supervised fine-tuning (SFT)**
+
+The model learns to follow instructions from human-annotated examples.
+
+<div class="text-sm mt-4 text-gray-600">
+
+📊 Less data · 👤 Curated examples · 🎯 Instruction following
+
+</div>
+</div>
+
+<div>
+
+**3. Reinforcement learning from human feedback (RLHF)**
+
+The model learns to be helpful, honest, and harmless through human preferences.
+
+<div class="text-sm mt-4 text-gray-600">
+
+👥 Human feedback · 🏆 Reward model · ✅ Alignment
 
 </div>
 </div>
 
 </v-clicks>
-
-<style>
-.two-cols-header {
-  column-gap: 16px;
-}
-</style>
 
 <!--
-**Timing**: 2 minutes
-
-**Objective**: Demystify LLMs - they're not magic oracles.
-
-**Talking points**:
-- "To understand how to use AI, you need to understand how it's created"
-- "Pre-training = massive learning on internet, books, code"
+**1. Pre-training**:
+- "Massive learning on internet, books, code"
+- "Next Token Prediction on huge corpora"
 - "Costs millions of dollars - that's why YOU can't create one"
-- "Fine-tuning = we teach the model to follow instructions, be helpful"
-- "Cheaper, uses human feedback"
-- "Pre-training uses Next Token Prediction on massive corpora"
-- "Fine-tuning includes instruction-tuning and RLHF (Reinforcement Learning from Human Feedback)"
-- "That's why some models are better for code (fine-tuned on GitHub)"
 
-**Why it matters for technical debt**:
-- "Pre-training = the model has SEEN lots of legacy and modern code"
-- "Fine-tuning = it has learned to HELP developers"
-- "But it doesn't know YOUR context - that's why validation is critical"
+**2. Supervised fine-tuning (SFT)**:
+- "We teach it to follow instructions with annotated examples"
+- "Much less data, much cheaper"
+- "This is where a model becomes good at code, dialogue, etc."
 
-**Transition to slide 6**:
-"Now, what happens when you send it a prompt?"
-
-**Energy**: Educational - teaching the fundamentals
+**3. RLHF (Reinforcement Learning from Human Feedback)**:
+- "We teach it to prefer good answers via human feedback"
+- "Reward model trained on human preferences"
+- "Goal: helpful, honest, harmless (HHH)"
 -->

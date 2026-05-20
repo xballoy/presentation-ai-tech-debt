@@ -30,29 +30,8 @@ Structure the output so each item can be addressed independently.
 ```
 
 <!--
-⚠️ Run the prompt and explain while it's running
-
-**Timing**: 1-2 minutes
-
-**Key points about the prompt**:
-1. **Precision vs vague**
-   - ❌ "Analyze technical debt" (too vague, random results)
-   - ✅ This prompt: structured, specific, defined output format
-   - "Look at the structure - we specify EXACTLY what we're looking for"
-
-2. **Prompt content**
-   - Precise focus areas (smells, dependencies, architecture, security...)
-   - Structured output format (location, severity, effort, remediation)
-   - Action plan requested (quick wins, critical, long-term)
-
-3. **How to create a good prompt**
-   - If you don't know what to write, ask the AI to give you a prompt
-   - Be **specific** in your requests
-   - Guidances file: minimum necessary to limit the context window
-
-- This prompt: ~150 tokens → response: ~2000-5000 tokens
-- Constant trade-off: precision vs context window
-- Guidances: enrich iteratively rather than writing everything at once
-
-**Transition**: "Now let's watch the AI work in real time..."
+- Claude: Sandbox mode (Docker sbx)
+- Use Plan mode
+    - read-only (enforced by the prompt only)
+    - ideal for exploration and reviews
 -->

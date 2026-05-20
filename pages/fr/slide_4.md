@@ -1,21 +1,27 @@
-# Le problème : la dette technique s'accumule
+# L'IA peut aider... ou aggraver
 
-- Dégradation de l'écosystème externe
-- Accumulation des décisions internes
-- Complexité de la croissance
+<div class="grid grid-cols-2 gap-4">
 
-<!--
-**Dégradation de l'écosystème externe**
-- Les dépendances vieillissent et perdent leur maintenance
-- Les vulnérabilités de sécurité s'accumulent dans ta stack
-- Les idiomes du langage et les bonnes pratiques évoluent au-delà de ton code
+<div>
 
-**Accumulation des décisions internes**
-- Les choix architecturaux précoces deviennent désalignés avec les besoins actuels
-- La pression du shipping crée des raccourcis qui facilitent les prochains raccourcis
-- Les lacunes de connaissance laissent les déviations du design original se multiplier
+### Potentiel
 
-**Complexité de la croissance**
-- Le succès amène des cas limites et des interactions de fonctionnalités imprévues
-- Les systèmes construits pour une petite échelle cassent sous des charges plus importantes
--->
+- Analyser des milliers de lignes
+- Détecter des patterns obsolètes
+- Proposer des migrations
+- Automatiser le refactoring
+
+</div>
+
+<div>
+
+### Risques
+
+- Suggestions hors contexte
+- Estimations irréalistes
+- Changements non testés
+- **La dette technique augmente au lieu de diminuer**
+
+</div>
+
+</div>

@@ -1,12 +1,11 @@
 # Migration majeure : React 19.2
 
-Prompt de migration
+Approche interactive
 
-```text
-Plan the React migration from the frontend to the latest version (19.2).
+- Claude analyse et pose des questions
+- Vous guidez la stratégie
+- Claude génère un plan détaillé
 
-Constraints:
-- Do not migrate to TypeScript
-- Ensure libraries compatibility with React 19.2
-- Propose E2E testing strategy to validate before and after
-```
+<SlidevVideo v-click controls>
+  <source :src="'/claude-code-react-questions.mp4'" type="video/mp4" />
+</SlidevVideo>

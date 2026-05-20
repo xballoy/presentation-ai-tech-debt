@@ -1,18 +1,40 @@
-# Points clés
+# Et après ? Payer la dette en continu
 
-## Cinq démos, une approche
+Jusqu'ici : un dev qui rembourse la dette de manière réactive. La suite : des agents qui paient en continu.
 
-1. **Analyser** : l'IA explore, nous validons les findings
-2. **Planifier** : l'IA propose un plan, nous l'orientons
-3. **Décider** : l'IA compare les alternatives, nous choisissons
-4. **Simplifier** : l'IA repère les dépendances inutiles, nous mesurons l'effort
-5. **Automatiser** : l'IA écrit le codemod, nous validons le diff
+<div class="grid grid-cols-2 gap-6">
 
-<br />
+<div>
 
-## Par où commencer sur vos projets
+### Le problème de drift
 
-- **Commencez petit** : analyse de code (faible risque)
-- **Développez votre esprit critique** : questionnez tout
-- **Élargissez progressivement** : migration → refactoring → automatisation
-- **Gardez le contrôle** : l'IA propose, vous décidez
+Les agents reproduisent les patterns existants, y compris les mauvais. Le code dérive lentement.
+
+> Chez OpenAI, **20 % de la semaine (tous les vendredis) à nettoyer le « AI slop »** avant qu'ils n'automatisent ça.
+
+Source : _Harness engineering_, Ryan Lopopolo, OpenAI (fév. 2026).
+
+</div>
+
+<div>
+
+### La réponse : le harness
+
+1. Encoder les « golden principles » dans le repo
+2. Des agents en tâche de fond qui scannent les dérives
+3. Des PRs de cleanup petites, ciblées, automerge
+4. **Payer la dette de manière continue** plutôt qu'en gros chantiers périodiques
+
+</div>
+
+</div>
+
+<br/>
+
+### gh-aw — la version open source
+
+[`github/gh-aw`](https://github.github.com/gh-aw/) : workflows agentiques dans GitHub Actions, déclarés en markdown.
+
+```bash
+gh extension install github/gh-aw
+```

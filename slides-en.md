@@ -13,7 +13,6 @@ routerMode: hash
 
 # AI for managing technical debt
 
-
 ---
 src: ./pages/en/slide_2.md
 ---
@@ -96,4 +95,8 @@ src: ./pages/en/slide_21.md
 
 ---
 src: ./pages/en/slide_22.md
+---
+
+---
+src: ./pages/en/slide_23.md
 ---

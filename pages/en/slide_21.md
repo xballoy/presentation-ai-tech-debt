@@ -1,40 +1,40 @@
-# Key takeaways
+# What's next? Pay the debt continuously
 
-## Five demos, one approach
+So far: a developer paying down the debt reactively. What's next: agents paying it down continuously.
 
-1. **Code analysis**: AI analyzes, we evaluate
-2. **Critical thinking**: AI estimated effort, we contextualize
-3. **Migration decisions**: AI compared options, we chose
-4. **Automation**: AI wrote code, we validated
+<div class="grid grid-cols-2 gap-6">
 
-<br />
+<div>
 
-## Where to start on your projects
+### The drift problem
 
-- **Start small**: code analysis (low risk)
-- **Develop critical thinking**: question everything
-- **Expand progressively**: migration → refactoring → automation
-- **Keep control**: AI proposes, you decide
+Agents reproduce existing patterns, including bad ones. The code slowly drifts.
 
-<!--
-**Timing**: 2 minutes
+> At OpenAI, **20% of the week (every Friday) cleaning up the "AI slop"** before they automated it.
 
-**Objective**: Synthesize learning and reinforce the main message.
+Source: _Harness engineering_, Ryan Lopopolo, OpenAI (Feb. 2026).
 
-**Talking points**:
-- "You've seen 4 different demos, but the same pattern each time"
-- "AI suggests, YOU validate - that's the difference with vibe coding"
-- "Don't start by migrating React 19 - start by analyzing your code"
-- "Build your confidence progressively"
+</div>
 
-**For advanced users**:
-- "Codemods are powerful but require rigorous validation"
-- "Think of AI as a very fast pair programmer that needs supervision"
+<div>
 
-**Transition to slide 19 (Resources)**:
-"If you want to go deeper on these concepts..."
+### The answer: the harness
 
-**Energy**: Authoritative - strong close with clear message
+1. Encode the "golden principles" in the repo
+2. Background agents that scan for drift
+3. Small, targeted, automerge cleanup PRs
+4. **Pay down the debt continuously** rather than in big periodic projects
 
-**Final checkpoint**: Reiterate one last time "AI suggests, human validates"
--->
+</div>
+
+</div>
+
+<br/>
+
+### gh-aw — the open source version
+
+[`github/gh-aw`](https://github.github.com/gh-aw/): agentic workflows in GitHub Actions, declared in markdown.
+
+```bash
+gh extension install github/gh-aw
+```

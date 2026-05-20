@@ -1,11 +1,17 @@
-# Migration majeure : React 19.2
+# Comparer avant de migrer
 
-Approche interactive
+L'agent analyse les options et recommande la meilleure approche pour votre contexte.
 
-- Claude analyse et pose des questions
-- Vous guidez la stratégie
-- Claude génère un plan détaillé
+## Exemple de prompt
 
-<SlidevVideo v-click controls>
-  <source :src="'/claude-code-react-questions.mp4'" type="video/mp4" />
-</SlidevVideo>
+```text
+Search body-parser alternatives.
+
+Compare:
+- Performance and bundle size
+- API compatibility
+- Migration effort
+- Active maintenance
+
+Recommend the best option for our use case.
+```

@@ -1,36 +1,19 @@
-# Compare alternatives before migrating
+# Remove rather than migrate
 
-The agent analyzes options and recommends the best approach for your context.
+The best dependency is the one you don't have. The agent identifies what can return to native APIs.
 
 ## Example prompt
 
 ```text
-Search body-parser alternatives.
+Analyze our use of lodash in the codebase.
 
-Compare:
-- Performance and bundle size
-- API compatibility
-- Migration effort
-- Active maintenance
+Identify functions that can be replaced with native JavaScript APIs.
 
-Recommend the best option for our use case.
+For each replacement:
+- Show the native equivalent
+- Confirm identical behavior
+- Highlight any edge cases
+- Estimate migration effort
+
+Prioritize high-usage functions first.
 ```
-
-<!--
-**Timing**: 2-3 minutes
-
-**Objective**: Show how to use AI for migration decisions.
-
-**KEY MESSAGE**: Don't migrate blindly - analyze alternatives first.
-
-**Talking points**:
-- "body-parser is deprecated - but what should we migrate to?"
-- "The agent can objectively compare multiple alternatives"
-- "You get a detailed analysis: performance, compatibility, effort"
-- "Then YOU decide based on your context"
-
-**Transition to slide 17**:
-"Sometimes, the best migration is removing the dependency..."
-
-**Energy**: Pragmatic - focus on informed decisions
--->
