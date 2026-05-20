@@ -7,5 +7,5 @@ Approche interactive
 - Claude génère un plan détaillé
 
 <SlidevVideo v-click controls>
-  <source src="/claude-code-react-questions.mp4" type="video/mp4" />
+  <source :src="'/claude-code-react-questions.mp4'" type="video/mp4" />
 </SlidevVideo>
