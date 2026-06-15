@@ -11,11 +11,11 @@
   "dependencies": {
     "@slidev/cli": "52.16.0",
     "@slidev/theme-default": "0.25.0",
-    "vue": "3.5.35"
+    "vue": "3.5.38"
   },
   "devDependencies": {
-    "prettier": "3.8.3",
+    "prettier": "3.8.4",
     "prettier-plugin-slidev": "1.0.5"
   },
-  "packageManager": "pnpm@11.5.2"
+  "packageManager": "pnpm@11.6.0"
 }
